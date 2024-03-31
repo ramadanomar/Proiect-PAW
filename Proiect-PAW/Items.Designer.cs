@@ -38,8 +38,8 @@
             logoutButton = new Label();
             titlePanel = new Panel();
             titleLabel = new Label();
-            numeFilmTextBox = new TextBox();
-            numeFilmLabel = new Label();
+            numeClientTextBox = new TextBox();
+            numeClientLabel = new Label();
             categorieInputLabel = new Label();
             pretLabel = new Label();
             pretTextBox = new TextBox();
@@ -48,14 +48,14 @@
             categorieComboBox = new ComboBox();
             editProductButton = new Button();
             deleteProductButton = new Button();
-            dataGridView1 = new DataGridView();
+            filmeDataGridView1 = new DataGridView();
             datagridLabel = new Label();
             addProductButton = new Button();
             closeAppButton = new Label();
             sidebarPanel.SuspendLayout();
             logoutPanel.SuspendLayout();
             titlePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)filmeDataGridView1).BeginInit();
             SuspendLayout();
             // 
             // sidebarPanel
@@ -169,26 +169,26 @@
             titleLabel.TabIndex = 0;
             titleLabel.Text = "Proiect PAW - Ramdan Omar";
             // 
-            // numeFilmTextBox
+            // numeClientTextBox
             // 
-            numeFilmTextBox.Location = new Point(253, 167);
-            numeFilmTextBox.Name = "numeFilmTextBox";
-            numeFilmTextBox.Size = new Size(177, 27);
-            numeFilmTextBox.TabIndex = 3;
+            numeClientTextBox.Location = new Point(259, 106);
+            numeClientTextBox.Name = "numeClientTextBox";
+            numeClientTextBox.Size = new Size(177, 27);
+            numeClientTextBox.TabIndex = 3;
             // 
-            // numeFilmLabel
+            // numeClientLabel
             // 
-            numeFilmLabel.AutoSize = true;
-            numeFilmLabel.Location = new Point(253, 145);
-            numeFilmLabel.Name = "numeFilmLabel";
-            numeFilmLabel.Size = new Size(89, 19);
-            numeFilmLabel.TabIndex = 4;
-            numeFilmLabel.Text = "Nume Film";
+            numeClientLabel.AutoSize = true;
+            numeClientLabel.Location = new Point(259, 84);
+            numeClientLabel.Name = "numeClientLabel";
+            numeClientLabel.Size = new Size(89, 19);
+            numeClientLabel.TabIndex = 4;
+            numeClientLabel.Text = "Nume Film";
             // 
             // categorieInputLabel
             // 
             categorieInputLabel.AutoSize = true;
-            categorieInputLabel.Location = new Point(457, 145);
+            categorieInputLabel.Location = new Point(463, 84);
             categorieInputLabel.Name = "categorieInputLabel";
             categorieInputLabel.Size = new Size(84, 19);
             categorieInputLabel.TabIndex = 6;
@@ -197,7 +197,7 @@
             // pretLabel
             // 
             pretLabel.AutoSize = true;
-            pretLabel.Location = new Point(671, 145);
+            pretLabel.Location = new Point(677, 84);
             pretLabel.Name = "pretLabel";
             pretLabel.Size = new Size(40, 19);
             pretLabel.TabIndex = 8;
@@ -205,7 +205,7 @@
             // 
             // pretTextBox
             // 
-            pretTextBox.Location = new Point(671, 167);
+            pretTextBox.Location = new Point(677, 106);
             pretTextBox.Name = "pretTextBox";
             pretTextBox.Size = new Size(177, 27);
             pretTextBox.TabIndex = 7;
@@ -213,7 +213,7 @@
             // canitateLabel
             // 
             canitateLabel.AutoSize = true;
-            canitateLabel.Location = new Point(887, 145);
+            canitateLabel.Location = new Point(893, 84);
             canitateLabel.Name = "canitateLabel";
             canitateLabel.Size = new Size(79, 19);
             canitateLabel.TabIndex = 10;
@@ -221,7 +221,7 @@
             // 
             // cantitateTextBox
             // 
-            cantitateTextBox.Location = new Point(887, 167);
+            cantitateTextBox.Location = new Point(893, 106);
             cantitateTextBox.Name = "cantitateTextBox";
             cantitateTextBox.Size = new Size(177, 27);
             cantitateTextBox.TabIndex = 9;
@@ -229,7 +229,7 @@
             // categorieComboBox
             // 
             categorieComboBox.FormattingEnabled = true;
-            categorieComboBox.Location = new Point(457, 169);
+            categorieComboBox.Location = new Point(463, 108);
             categorieComboBox.Name = "categorieComboBox";
             categorieComboBox.Size = new Size(167, 27);
             categorieComboBox.TabIndex = 11;
@@ -240,7 +240,7 @@
             editProductButton.FlatAppearance.BorderSize = 0;
             editProductButton.FlatStyle = FlatStyle.Flat;
             editProductButton.ForeColor = Color.White;
-            editProductButton.Location = new Point(472, 245);
+            editProductButton.Location = new Point(478, 184);
             editProductButton.Name = "editProductButton";
             editProductButton.Size = new Size(106, 33);
             editProductButton.TabIndex = 12;
@@ -253,26 +253,26 @@
             deleteProductButton.FlatAppearance.BorderSize = 0;
             deleteProductButton.FlatStyle = FlatStyle.Flat;
             deleteProductButton.ForeColor = Color.White;
-            deleteProductButton.Location = new Point(731, 245);
+            deleteProductButton.Location = new Point(737, 184);
             deleteProductButton.Name = "deleteProductButton";
             deleteProductButton.Size = new Size(106, 33);
             deleteProductButton.TabIndex = 13;
             deleteProductButton.Text = "Sterge";
             deleteProductButton.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // filmeDataGridView1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(198, 328);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(945, 242);
-            dataGridView1.TabIndex = 14;
+            filmeDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            filmeDataGridView1.Location = new Point(198, 284);
+            filmeDataGridView1.Name = "filmeDataGridView1";
+            filmeDataGridView1.Size = new Size(945, 286);
+            filmeDataGridView1.TabIndex = 14;
             // 
             // datagridLabel
             // 
             datagridLabel.AutoSize = true;
             datagridLabel.Font = new Font("Inter", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            datagridLabel.Location = new Point(625, 300);
+            datagridLabel.Location = new Point(628, 246);
             datagridLabel.Name = "datagridLabel";
             datagridLabel.Size = new Size(64, 25);
             datagridLabel.TabIndex = 15;
@@ -284,7 +284,7 @@
             addProductButton.FlatAppearance.BorderSize = 0;
             addProductButton.FlatStyle = FlatStyle.Flat;
             addProductButton.ForeColor = Color.White;
-            addProductButton.Location = new Point(605, 245);
+            addProductButton.Location = new Point(611, 184);
             addProductButton.Name = "addProductButton";
             addProductButton.Size = new Size(106, 33);
             addProductButton.TabIndex = 16;
@@ -310,7 +310,7 @@
             ClientSize = new Size(1143, 570);
             Controls.Add(addProductButton);
             Controls.Add(datagridLabel);
-            Controls.Add(dataGridView1);
+            Controls.Add(filmeDataGridView1);
             Controls.Add(deleteProductButton);
             Controls.Add(editProductButton);
             Controls.Add(categorieComboBox);
@@ -319,8 +319,8 @@
             Controls.Add(pretLabel);
             Controls.Add(pretTextBox);
             Controls.Add(categorieInputLabel);
-            Controls.Add(numeFilmLabel);
-            Controls.Add(numeFilmTextBox);
+            Controls.Add(numeClientLabel);
+            Controls.Add(numeClientTextBox);
             Controls.Add(titlePanel);
             Controls.Add(sidebarPanel);
             Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -335,7 +335,7 @@
             logoutPanel.PerformLayout();
             titlePanel.ResumeLayout(false);
             titlePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)filmeDataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -353,8 +353,8 @@
         private Label graficeMenuLabel;
         private Panel titlePanel;
         private Label titleLabel;
-        private TextBox numeFilmTextBox;
-        private Label numeFilmLabel;
+        private TextBox numeClientTextBox;
+        private Label numeClientLabel;
         private Label categorieInputLabel;
         private TextBox pretTextBox;
         private Label canitateLabel;
@@ -362,7 +362,7 @@
         private ComboBox categorieComboBox;
         private Button editProductButton;
         private Button deleteProductButton;
-        private DataGridView dataGridView1;
+        private DataGridView filmeDataGridView1;
         private Label datagridLabel;
         private Button addProductButton;
         private Label closeAppButton;
