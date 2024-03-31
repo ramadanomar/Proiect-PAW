@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proiect_PAW
 {
-    public partial class Items : Form
+    public partial class Filme : Form
     {
-        public Items()
+        public Filme()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Proiect_PAW
 {
-    partial class Items
+    partial class Filme
     {
         /// <summary>
         /// Required designer variable.
