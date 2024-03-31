@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             closeAppButton = new Label();
             addClientButton = new Button();
             datagridLabel = new Label();
-            clientiDataGridView1 = new DataGridView();
+            clientCollectionBindingSource = new BindingSource(components);
             deleteClientButton = new Button();
             editClientButton = new Button();
             sexComboBox = new ComboBox();
             pretLabel = new Label();
-            telefonTextBox = new TextBox();
+            telefonClientTextBox = new TextBox();
             categorieInputLabel = new Label();
             numeFilmLabel = new Label();
             titleLabel = new Label();
@@ -48,12 +49,16 @@
             inchirieriMenuLabel = new Label();
             produseMenuLabel = new Label();
             logoutPanel = new Panel();
-            numeFilmTextBox = new TextBox();
+            numeClientTextBox = new TextBox();
             sidebarPanel = new Panel();
-            ((System.ComponentModel.ISupportInitialize)clientiDataGridView1).BeginInit();
+            dataGridView1 = new DataGridView();
+            clientCollectionBindingSource1 = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)clientCollectionBindingSource).BeginInit();
             titlePanel.SuspendLayout();
             logoutPanel.SuspendLayout();
             sidebarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)clientCollectionBindingSource1).BeginInit();
             SuspendLayout();
             // 
             // closeAppButton
@@ -79,6 +84,7 @@
             addClientButton.TabIndex = 31;
             addClientButton.Text = "Adauga";
             addClientButton.UseVisualStyleBackColor = false;
+            addClientButton.Click += addClientButton_Click;
             // 
             // datagridLabel
             // 
@@ -90,13 +96,9 @@
             datagridLabel.TabIndex = 30;
             datagridLabel.Text = "Clienti";
             // 
-            // clientiDataGridView1
+            // clientCollectionBindingSource
             // 
-            clientiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            clientiDataGridView1.Location = new Point(198, 285);
-            clientiDataGridView1.Name = "clientiDataGridView1";
-            clientiDataGridView1.Size = new Size(945, 285);
-            clientiDataGridView1.TabIndex = 29;
+            clientCollectionBindingSource.DataSource = typeof(Data.ClientCollection);
             // 
             // deleteClientButton
             // 
@@ -142,12 +144,12 @@
             pretLabel.TabIndex = 23;
             pretLabel.Text = "Telefon";
             // 
-            // telefonTextBox
+            // telefonClientTextBox
             // 
-            telefonTextBox.Location = new Point(807, 117);
-            telefonTextBox.Name = "telefonTextBox";
-            telefonTextBox.Size = new Size(177, 27);
-            telefonTextBox.TabIndex = 22;
+            telefonClientTextBox.Location = new Point(807, 117);
+            telefonClientTextBox.Name = "telefonClientTextBox";
+            telefonClientTextBox.Size = new Size(177, 27);
+            telefonClientTextBox.TabIndex = 22;
             // 
             // categorieInputLabel
             // 
@@ -263,12 +265,12 @@
             logoutPanel.Size = new Size(198, 46);
             logoutPanel.TabIndex = 0;
             // 
-            // numeFilmTextBox
+            // numeClientTextBox
             // 
-            numeFilmTextBox.Location = new Point(389, 117);
-            numeFilmTextBox.Name = "numeFilmTextBox";
-            numeFilmTextBox.Size = new Size(177, 27);
-            numeFilmTextBox.TabIndex = 19;
+            numeClientTextBox.Location = new Point(389, 117);
+            numeClientTextBox.Name = "numeClientTextBox";
+            numeClientTextBox.Size = new Size(177, 27);
+            numeClientTextBox.TabIndex = 19;
             // 
             // sidebarPanel
             // 
@@ -285,37 +287,54 @@
             sidebarPanel.Size = new Size(198, 570);
             sidebarPanel.TabIndex = 17;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.DataSource = clientCollectionBindingSource1;
+            dataGridView1.Location = new Point(289, 311);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(794, 212);
+            dataGridView1.TabIndex = 32;
+            // 
+            // clientCollectionBindingSource1
+            // 
+            clientCollectionBindingSource1.DataSource = typeof(Data.ClientCollection);
+            // 
             // Clienti
             // 
             AutoScaleDimensions = new SizeF(10F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1143, 570);
+            Controls.Add(dataGridView1);
             Controls.Add(addClientButton);
             Controls.Add(datagridLabel);
-            Controls.Add(clientiDataGridView1);
             Controls.Add(deleteClientButton);
             Controls.Add(editClientButton);
             Controls.Add(sexComboBox);
             Controls.Add(pretLabel);
-            Controls.Add(telefonTextBox);
+            Controls.Add(telefonClientTextBox);
             Controls.Add(categorieInputLabel);
             Controls.Add(numeFilmLabel);
             Controls.Add(titlePanel);
-            Controls.Add(numeFilmTextBox);
+            Controls.Add(numeClientTextBox);
             Controls.Add(sidebarPanel);
             Font = new Font("Inter", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "Clienti";
             Text = "Clienti";
-            ((System.ComponentModel.ISupportInitialize)clientiDataGridView1).EndInit();
+            Load += Clienti_Load;
+            ((System.ComponentModel.ISupportInitialize)clientCollectionBindingSource).EndInit();
             titlePanel.ResumeLayout(false);
             titlePanel.PerformLayout();
             logoutPanel.ResumeLayout(false);
             logoutPanel.PerformLayout();
             sidebarPanel.ResumeLayout(false);
             sidebarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)clientCollectionBindingSource1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -325,12 +344,11 @@
         private Label closeAppButton;
         private Button addClientButton;
         private Label datagridLabel;
-        private DataGridView clientiDataGridView1;
         private Button deleteClientButton;
         private Button editClientButton;
         private ComboBox sexComboBox;
         private Label pretLabel;
-        private TextBox telefonTextBox;
+        private TextBox telefonClientTextBox;
         private Label categorieInputLabel;
         private Label numeFilmLabel;
         private Label titleLabel;
@@ -342,7 +360,10 @@
         private Label inchirieriMenuLabel;
         private Label produseMenuLabel;
         private Panel logoutPanel;
-        private TextBox numeFilmTextBox;
+        private TextBox numeClientTextBox;
         private Panel sidebarPanel;
+        private BindingSource clientCollectionBindingSource;
+        private DataGridView dataGridView1;
+        private BindingSource clientCollectionBindingSource1;
     }
 }

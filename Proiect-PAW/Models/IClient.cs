@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Proiect_PAW.Models
 {
-    enum Sex
+    public enum Sex
     {
         Masculin,
-        Feminin
+        Feminin,
+        Necunoscut
     }
 
     internal interface IClient
